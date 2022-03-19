@@ -1,0 +1,25 @@
+{{ define "editar" }}
+{{ template "cabecera" }}
+
+<div class="card" >
+    <div class="card-body">
+        <form method="POST" action="/update">
+            <div class="mb-3">
+                <input value="{{.Id}}" type="hidden" class="form-control" id="txtId" name="txtId" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input value="{{.Nombre}}" type="text" class="form-control" id="txtNombre" name="txtNombre" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Correo</label>
+                <input value="{{.Correo}}" type="email" class="form-control" id="txtCorreo" name="txtCorreo" placeholder="Correo">
+            </div>
+            <a name="" id="" class="btn btn-primary" href="/" role="button">Cancelar</a>
+            <button type="submit" class="btn btn-success">Modificar</button>
+        </form>
+    </div>
+</div>
+
+{{ template "pie" }}
+{{ end }}
